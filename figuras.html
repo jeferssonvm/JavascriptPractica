@@ -4,16 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style_figuras.css">
     <title>Figuras Geometricas </title>
 </head>
 <body>
-    <div class="main_container">
-        <div class="card card_Cuadrado">
-            <h1>Triangulo</h1>
-            <figure>
-                <img src="" alt="">
-            </figure>
-        </div>
-    </div>
+    <header class="header">
+        <h1>Figuras geometricas</h1>
+    </header>
+    <main class="main">
+            <div class="card card_Cuadrado">
+                <h2>cuadrado</h2>
+                <figure class="imagenGeometrica imagenCuadrado">
+                    <img src="https://thumbs.dreamstime.com/z/icono-cuadrado-figura-geom%C3%A9trica-elemento-para-los-apps-m%C3%B3viles-del-concepto-y-web-l%C3%ADnea-fina-el-dise%C3%B1o-desarrollo-revelador-108675237.jpg" alt="Cuadrado">
+                </figure>
+                <form action="">
+                    <label for="InputCuadrado">Escribe cuánto mide cada lado de tu cuadrado:</label>
+                    <input type="number" id="InputCuadrado">
+                    <button type="button" onclick="calcularPerimetroCuadrado()">calcular perimetro</button>
+                    <P> El resusltado es :<span id="CuadradoSalida"></span></P>
+                </form>
+
+            </div>
+
+    </main>
+
+    <script src="./javascript/figuras_Geometricas.js"></script>
 </body>
 </html>
