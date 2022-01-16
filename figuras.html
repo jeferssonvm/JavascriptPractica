@@ -17,14 +17,92 @@
                 <figure class="imagenGeometrica imagenCuadrado">
                     <img src="https://thumbs.dreamstime.com/z/icono-cuadrado-figura-geom%C3%A9trica-elemento-para-los-apps-m%C3%B3viles-del-concepto-y-web-l%C3%ADnea-fina-el-dise%C3%B1o-desarrollo-revelador-108675237.jpg" alt="Cuadrado">
                 </figure>
-                <form action="">
+                <form action="" class="formulario formularioCuadrado">
                     <label for="InputCuadrado">Escribe cuánto mide cada lado de tu cuadrado:</label>
                     <input type="number" id="InputCuadrado">
-                    <button type="button" onclick="calcularPerimetroCuadrado()">calcular perimetro</button>
-                    <P> El resusltado es :<span id="CuadradoSalida"></span></P>
+                    <P> El valor del perimetro es:   <span id="PerimetroCuadradoSalida"></span></P>
+                    <p>El valor del area es:  <span id="AreaCuadradoSalida"></span> </p>
                 </form>
+                <div class="botons">
+                    <button type="button" onclick="calcularPerimetroCuadrado()">Calcular Perimetro</button>
+                    <button type="button" onclick="calcularAreaCuadrado()">Calcular Area</button>
+                </div>
+            </div><!--card card_Cuadrado-->
 
-            </div>
+            <div class="card card_Circulo">
+                <h2>circulo</h2>
+                <figure class="imagenGeometrica imagenCirculo">
+                    <img src="https://png.pngtree.com/png-clipart/20200801/ourlarge/pngtree-black-ring-png-image_2319165.jpg" alt="Cuadrado">
+                </figure>
+                <form action="" class="formulario formularioCirculo">
+                    <label for="RadioCirculo">Escribe el tamaño del radio:</label>
+                    <input type="number" id="RadioCirculo">
+                    <label for="DiametroCirculo">Escribe el tamaño del diametro:</label>
+                    <input type="number" id="DiametroCirculo">
+                    <P> El valor del perimetro es :  <span id="PerimetroCirculoSalida"></span></P>
+                    <p>El valor del area es:   <span id="AreaCirculoSalida"></span> </p>
+                </form>
+                <div class="botons">
+                    <button type="button" onclick="calcularPerimetroCirculo()">Calcular Perimetro</button>
+                    <button type="button" onclick="calcularAreaCirculo()">Calcular Area</button>
+                </div>
+            </div> <!--card card_Circulo-->
+
+            
+            <div class="card card_Rombo">
+                <h2>Rombo</h2>
+                <figure class="imagenGeometrica imagenRombo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Foto_rombo.png" alt="Cuadrado">
+                </figure>
+                <form action="" class="formulario formularioRombo">
+                    <label for="ladoRombo">Escribe el tamaño de un lado del rombo</label>
+                    <input type="number" id="ladoRombo">
+
+                    <div>
+                        <label for="DiagonalMenor">Escribe la diagonal Menor</label>
+                        <input type="number" id="DiagonalMenor">
+                    </div>
+                    <div>
+                        <label for="DiagonalMayor"> Escribe la diagonal mayor</label>
+                        <input type="number" id="DiagonalMayor">    
+                    </div>
+                    
+
+                    <P> El valor del perimetro es :  <span id="PerimetroRomboSalida"></span></P>
+                    <p>El valor del area es:   <span id="AreaRomboSalida"></span> </p>
+                </form>
+                <div class="botons">
+                    <button type="button" onclick="calcularPerimetroRombo()">Calcular Perimetro</button>
+                    <button type="button" onclick="calcularAreaRombo()">Calcular Area</button>
+                </div>
+            </div> <!--card card_Rombo-->
+            <div class="card card_Rombo">
+                <h2>Rombo</h2>
+                <figure class="imagenGeometrica imagenRombo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Foto_rombo.png" alt="Cuadrado">
+                </figure>
+                <form action="" class="formulario formularioRombo">
+                    <label for="ladoRombo">Escribe el tamaño de un lado del rombo</label>
+                    <input type="number" id="ladoRombo">
+
+                    <div>
+                        <label for="DiagonalMenor">Escribe la diagonal Menor</label>
+                        <input type="number" id="DiagonalMenor">
+                    </div>
+                    <div>
+                        <label for="DiagonalMayor"> Escribe la diagonal mayor</label>
+                        <input type="number" id="DiagonalMayor">    
+                    </div>
+                    
+
+                    <P> El valor del perimetro es :  <span id="PerimetroRomboSalida"></span></P>
+                    <p>El valor del area es:   <span id="AreaRomboSalida"></span> </p>
+                </form>
+                <div class="botons">
+                    <button type="button" onclick="calcularPerimetroRombo()">Calcular Perimetro</button>
+                    <button type="button" onclick="calcularAreaRombo()">Calcular Area</button>
+                </div>
+            </div> <!--card card_TrianguloIsosceles-->
 
     </main>
 
