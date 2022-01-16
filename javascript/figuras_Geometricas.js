@@ -65,25 +65,29 @@ function areaHexagono(base,apotema){
 /*triangulo isoceles*/
 
     function trianguloIsoceles(lado1, lado2,lado3){
-    
+        var resultado;
         if (lado1==lado2 || lado1 == lado3 || lado2 == lado3 ){
+            var resultado;
             if (lado1==lado2 && lado1 == lado3){
-                alert("el triangulo es equilatero")
+                resultado = "el triangulo es equilatero";
             }else{
                if(lado1==lado2 ){
-            
+                   resultado = funcionIsocelesTriangulo(lado1,lado3);/*lado repetido, lado difenrente */
                }
                if(lado1==lado3){
-
+                resultado = funcionIsocelesTriangulo(lado1,lado2);/*lado repetido, lado difenrente */
                } 
                if(lado2==lado3){
-                   
+                resultado = funcionIsocelesTriangulo(lado2,lado1);/*lado repetido, lado difenrente */
             } 
             }
         }else{
-            alert(" el triangulo es escaleno ")
+            resultado ="el triangulo es escaleno ";
         }
-        
+        function funcionIsocelesTriangulo(lado, base){
+            return rais = Math.sqrt(Math.pow(lado,2)-Math.pow(base,2)/4);
+        }
+        return resultado   
     }
 
 /*entrada html*/
