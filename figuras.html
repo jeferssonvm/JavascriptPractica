@@ -47,7 +47,6 @@
                     <button type="button" onclick="calcularAreaCirculo()">Calcular Area</button>
                 </div>
             </div> <!--card card_Circulo-->
-
             
             <div class="card card_Rombo">
                 <h2>Rombo</h2>
@@ -76,34 +75,40 @@
                     <button type="button" onclick="calcularAreaRombo()">Calcular Area</button>
                 </div>
             </div> <!--card card_Rombo-->
-            <div class="card card_Rombo">
-                <h2>Rombo</h2>
-                <figure class="imagenGeometrica imagenRombo">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Foto_rombo.png" alt="Cuadrado">
+
+
+            <div class="card card_TrianguloIsosceles">
+                <h2>Triángulo isósceles
+                </h2>
+                <figure class="imagenGeometrica imagenIsoceles">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Triangulo_is%C3%B3sceles_teorema.png" alt="triangulo isoceles">
                 </figure>
-                <form action="" class="formulario formularioRombo">
-                    <label for="ladoRombo">Escribe el tamaño de un lado del rombo</label>
-                    <input type="number" id="ladoRombo">
+                <form action="" class="formulario formularioIsoceles">
+                    <p> Escribe los 3 lados del cuadro isósceles</p>
+                   
+                    <div>
+                        <label for="ladoIsoceles">Lado  1 : </label>
+                        <input type="number" id="ladoIsoceles">
+                    </div>
 
                     <div>
-                        <label for="DiagonalMenor">Escribe la diagonal Menor</label>
-                        <input type="number" id="DiagonalMenor">
+                        <label for="lado2Isoceles">Lado  2 : </label>
+                        <input type="number" id="lado2Isoceles">
                     </div>
-                    <div>
-                        <label for="DiagonalMayor"> Escribe la diagonal mayor</label>
-                        <input type="number" id="DiagonalMayor">    
-                    </div>
-                    
 
-                    <P> El valor del perimetro es :  <span id="PerimetroRomboSalida"></span></P>
-                    <p>El valor del area es:   <span id="AreaRomboSalida"></span> </p>
+                   <div>
+                        <label for="lado3Isoceles">Lado  3 : </label>
+                        <input type="number" id="lado3Isoceles">
+                   </div>
+
+                    <P> La altura del triángulo es:  <span id="IsocelesSalida"></span></P>
+                    <p id="tipoDeTriangulo"></p>
+                   
                 </form>
                 <div class="botons">
-                    <button type="button" onclick="calcularPerimetroRombo()">Calcular Perimetro</button>
-                    <button type="button" onclick="calcularAreaRombo()">Calcular Area</button>
+                    <button type="button" onclick="alturaDelTrianguloIsoceles()">Altura del triángulo</button>  
                 </div>
             </div> <!--card card_TrianguloIsosceles-->
-
     </main>
 
     <script src="./javascript/figuras_Geometricas.js"></script>

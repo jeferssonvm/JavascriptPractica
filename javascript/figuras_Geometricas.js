@@ -1,4 +1,5 @@
 
+
 /*Cuadrado*/
 function perimetroCuadrado(lado){
     return (4*lado).toFixed(2);
@@ -23,46 +24,7 @@ function areaCirculo(radio){
 }
 
 
-
-
-
-/*Triangulo Equilatero
-function perimetroTriangulo(lado1,lado2,lado3){
-    return (lado1 + lado2 + lado3).toFixed(2);
-}
-function areaTriangulo(base, altura){
-    return  ((base*altura)/2).toFixed(2);
-}*/
-/*romboide
-function perimetroRomboide(baseRomboide,alturaRomboide){
-    return (2*baseRomboide)+(2*alturaRomboide).toFixed(2);
-}
-function areaRomboide(baseRomboide,alturaRomboide){
-    return (baseRomboide*alturaRomboide).toFixed(2);
-}*/
-/*trapecio
-function perimetroTrapecio(lado1,lado2,lado3,lado4){
-    return (lado1+lado2+lado3+lado4).toFixed(2);
-}
-function areaTrapecio(baseMenor,baseMayo,altura){
-    return ((altura(baseMayo+baseMenor))/2).toFixed(2);
-}*/
-/*pentagono
-function perimetroPentagono(base){
-    return (5*base).toFixed(2);
-}
-function areaPentagono(apotema,base){
-    return (((5*base)*apotema)/2).toFixed(2);
-}*/
-/*Hexagono
-function perimetroHexagono(base){
-    return (6*base).toFixed(2);
-}
-function areaHexagono(base,apotema){
-    return (((6*base)*apotema)/2).toFixed(2);
-}*/
-
-/*triangulo isoceles*/
+/*triangulo Isoceles*/
 
     function trianguloIsoceles(lado1, lado2,lado3){
         var resultado;
@@ -132,4 +94,25 @@ function calcularAreaRombo(){
     const area = areaRombo( valueMenor,valueMayor );
     alert(area);
     document.getElementById("AreaRomboSalida").innerHTML = area;
+}
+
+function alturaDelTrianguloIsoceles(){
+    
+    const inputLado1 = document.getElementById("ladoIsoceles");
+    const valueLado1 = inputLado1.value;
+    const inputLado2 = document.getElementById("lado2Isoceles");
+    const valueLado2 = inputLado2.value;
+
+    const inputLado3 = document.getElementById("lado3Isoceles");
+    const valueLado3 = inputLado3.value;
+
+    var altura = trianguloIsoceles(valueLado1,valueLado2,valueLado3);
+
+    if (!isNaN(altura)){
+        document.getElementById("IsocelesSalida").innerHTML =altura.toFixed(2);
+        document.getElementById("tipoDeTriangulo").style.visibility = "hidden";
+    }else{
+        document.getElementById("tipoDeTriangulo").style.visibility = "visible"; 
+        document.getElementById("tipoDeTriangulo").innerHTML = altura;
+    }
 }
