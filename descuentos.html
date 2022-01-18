@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style_descuentos.css">
+    <title>Segundo taller de Js</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Descuento</h1>
+    </header>
+    <main class="main">
+        <div class="card">
+            <h2>Calcula el precio con descuento</h2>
+            <form action="" class="card-form">
+                <label for="precioSindescuento">Ingrese el precio del producto:</label>
+                <input type="number" id="precioSindescuento">
+
+                
+                <div>
+                    <label for="descuento">Ingrese el porcentaje del descuento:</label>
+                    <input type="number" id="descuento"><span>%</span>
+                </div>
+                <div>
+                    <input type="button" value="Calcular" onclick="inputDiscountHtml()">
+                </div>
+                
+                <div class="card-solution">
+                    <p>Descuento aplicado : <span id="percentageDiscount"></span></p>
+                    <p>Valor descontado : <span id="priceDiscount"></span><span>%</span></p>
+                    <p>Precio a pagar :<span id="priceToPay"></span></p>
+                </div>
+                
+            </form>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="./javascript/descuento.js"></script>
+</body>
+</html>
