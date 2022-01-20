@@ -9,29 +9,31 @@ var productDiscounts =[
     {product:"ninguno", discounts:"0"}
 ]
 
-var retunDiscoun = productDiscounts.find(function(Discoun){
-    return Discoun.product ==="reloj";
-});
+function CalculoDelDescuento(prescioOriginal, descuento){
+    /* precio * (100-descuento)/100*/
+    const porcentajePrecioConDescuento = 100-descuento;
+    const precioConDescuento = (prescioOriginal*porcentajePrecioConDescuento)/100;
+    return precioConDescuento;
+}
 
-var articulos = [
-    { nombre: 'Bici', costo: 3000 },
-    { nombre: 'TV', costo: 2500 },
-    { nombre: 'Libro', costo: 320 },
-    { nombre: 'Celular', costo: 10000 },
-    { nombre: 'laptop', costo: 20000 },
-    { nombre: 'teclado', costo: 500 },
-    { nombre: 'audifonos', costo: 1700 }
-]
 
-var encuentraArticulos = articulos.find(function(articulo){
-    return articulo.nombre === 'laptop';
-});
 function inputDiscountHtml(){
-    
+ 
     const inputCost = document.getElementById("precioSindescuento");
     const valueCost = inputCost.value;
 
-    var inputDiscount = document.getElementById("descuentos");
+    var inputDiscount = document.getElementById("input_descuento");
     var valueDiscount = inputDiscount.value;
-    alert(valueDiscount)
+ 
+   
+    var retunDiscoun = productDiscounts.find(function(Discoun){
+        return Discoun.product ==valueDiscount;
+    });
+
+
+   const result = CalculoDelDescuento(valueCost,retunDiscoun.discounts)       
+
+   document.getElementById("priceDiscount").innerHTML = retunDiscoun.discounts +" %";
+   document.getElementById("percentageDiscount").innerHTML = (valueCost-result).toFixed(2);
+   document.getElementById("priceToPay").innerHTML = result.toFixed(2);
 }
