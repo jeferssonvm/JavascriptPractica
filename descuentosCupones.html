@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/style_descuentos.css">
-    <title>Segundo taller de Js</title>
+    <link rel="stylesheet" href="./style/style_descuentosCupones.css">
+    <title>Descuento con cupones </title>
 </head>
 <body>
     <header class="header">
@@ -17,25 +17,33 @@
             <form action="" class="card-form">
                 <label for="precioSindescuento">Ingrese el precio del producto:</label>
                 <input type="number" id="precioSindescuento">
+                
+                <label for="descuentos">Tipo de descuento aplicado</label>
+                <input list="descuentos">
+                <datalist id="descuentos">
+                    <option value="ninguno"></option>
+                    <option value="reloj"></option>
+                    <option value="televisores"></option>
+                    <option value="lavadoras"></option>
+                    <option value="auriculares"></option>
+                    <option value="computadoras"></option>
 
-                <div>
-                    <label for="descuento">Ingrese el porcentaje del descuento:</label>
-                    <input type="number" id="descuento"><span>%</span>
-                </div>
+                </datalist>
                 <div class="main-buttons">
                     <input class="buttons" type="button" value="Calcular" onclick="inputDiscountHtml()">
                 </div>
-                
+
                 <div class="card-solution">
                     <p>Porcentaje del descuento : <span id="priceDiscount"></span></p>
                     <p>Valor del descuento aplicado : $<span id="percentageDiscount"></span></p>
                     <p>Precio a pagar :  $<span id="priceToPay"></span></p>
                 </div>
                 
-            </form>
-        </div>
+            </form> 
+        </div> <!--card-->
+        
     </main>
     <footer></footer>
-    <script src="./javascript/descuento.js"></script>
+    <script src="./javascript/descuentosCupones.js"></script>
 </body>
 </html>

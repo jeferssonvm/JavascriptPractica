@@ -14,6 +14,9 @@ function inputDiscountHtml(){
     const valueDiscount = inputDiscount.value;
     
     const result = CalculoDelDescuento(valueCost,valueDiscount);
-    alert(result)
-    document.getElementById("result_discount").innerHTML = result;
+
+    document.getElementById("priceDiscount").innerHTML = valueDiscount;
+    document.getElementById("percentageDiscount").innerHTML = valueCost-result;
+    document.getElementById("priceToPay").innerHTML = result;
+
 }
