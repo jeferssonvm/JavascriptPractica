@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,39 +11,32 @@
     <header class="header">
         <h1>Media Moda y promedio</h1>
     </header>
-    <main>
-        <div class="list-date ">
-            <h2>lista de valores</h2>
-            <label for="">
-                <label for="data_number">numero de valores de la lista </label>
-                <input type="number" id="data_number">
+    <main class="main">
+        <div class="card card_list-date ">
+            <h2>Lista de valores</h2>
+            <form action="" >
+                <label for="number_value">Ingresa la lista de valores </label>
+                <input type="text" id="number_value">
+                <input type="button" value="Ingresar valor" onclick="inputDateList()">
                 
-                <label for="number_value">ingresa un valor para agregarlo a la lista </label>
-                <input type="number" id="number_value">
-                <p id="list_value_date"></p>
-            </label>
+                <div class="list_Container">
+                    <p>lista ordenada</p>
+                    <p>x = { <span id="list_value_date"></span> } </p>
+                    
+                    <p > Moda: <span id="show_mode"></span></p>
+                    <p > Mediana: <span id="show_median"></span></p>
+                    <p > Mediana: <span id="show_average"></span></p>
+
+                </div> <!-- list_Container -->
+            </form>
+            <div class="container-buttons">
+                <button type="button" onclick="generateModeClick()"> Moda</button>
+                <button type="button" onclick="generateMedianClick()"> Mediana</button>
+                <button type="button" onclick="generateAverageClick()"> Promedio</button>
+           </div>
             
         </div><!--list-date-->
-
-        <div class="card card-mean">
-            <h2> Media</h2>
-            <button type="button" onclick="getMean()"> Media</button>
-            <p id="show_mean"></p>
-        </div><!-- card card-mean-->
-
-        <div class="card card-median">
-            <h2>Mediana</h2>
-            <button type="button" onclick="getMedian()"> Mediana</button>
-            <p id="show_median"></p>
-        </div><!--card card-median-->
-
-        <div class="card card-average">
-            <h2>Promedio</h2>
-            <button type="button" onclick="getAverage()"> Promedio</button>
-            <p id="show_average"></p>
-        </div><!--card card-average-->
-
-
+  
     </main>
     <script src="./javascript/promedioModaMediana.js"></script>
 </body>
